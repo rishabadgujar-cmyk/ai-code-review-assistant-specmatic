@@ -1,0 +1,23 @@
+{
+  "/upload" : {
+    "POST" : {
+      "multipart/form-data" : {
+        "200" : [ {
+          "name" : " Scenario: POST /upload -> 200",
+          "baseUrl" : "http://host.docker.internal:9000",
+          "duration" : 0,
+          "testResult" : "Failed",
+          "valid" : true,
+          "wip" : false,
+          "request" : "POST /upload\nContent-Type: multipart/form-data\nSpecmatic-Response-Code: 200\n\n--#####\nContent-Disposition: form-data; name=\"file?\"; filename=\"[45, 104, -51, -61, 5, -92, -34, 72, 86, -11, 8, 82, -47, 65, 10, -80, 25, -87, 24, 89]\"\n\n(File content not shown here.  Please examine the file [45, 104, -51, -61, 5, -92, -34, 72, 86, -11, 8, 82, -47, 65, 10, -80, 25, -87, 24, 89])",
+          "requestTime" : 1781103216030,
+          "response" : "No Response",
+          "responseTime" : 1781103216030,
+          "specFileName" : "/usr/src/app/specs/codelensai.yaml",
+          "details" : " Scenario: POST /upload -> 200 has FAILED\nIn scenario \"Upload source code. Response: Analysis completed\"\nAPI: POST /upload -> 200\n\n     Connection refused",
+          "htmlResult" : "Failed"
+        } ]
+      }
+    }
+  }
+}

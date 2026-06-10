@@ -1,0 +1,1 @@
+{"specmaticConfigPath":"/usr/src/app/specmatic.yaml","apiCoverage":[{"type":null,"repository":null,"branch":null,"specification":"/usr/src/app/specs/codelensai.yaml","serviceType":"HTTP","operations":[{"path":"/upload","method":"POST","responseCode":200,"count":1,"coverageStatus":"covered"}]}]}
