@@ -1,0 +1,66 @@
+openapi: 3.0.0
+
+info:
+  title: CodeLensAI API
+  version: 1.0.0
+
+paths:
+  /upload:
+    post:
+      summary: Upload source code
+
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required:
+                - file
+              properties:
+                file:
+                  type: string
+                  format: binary
+
+      responses:
+        '200':
+          description: Analysis completed
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  filename:
+                    type: string
+
+                  score:
+                    type: integer
+
+                  summary:
+                    type: string
+
+                  bugs:
+                    type: array
+                    items:
+                      type: string
+
+                  security:
+                    type: array
+                    items:
+                      type: string
+
+                  performance:
+                    type: array
+                    items:
+                      type: string
+
+                  best_practices:
+                    type: array
+                    items:
+                      type: string
+
+                  complexity:
+                    type: object
+
+                  metrics:
+                    type: object

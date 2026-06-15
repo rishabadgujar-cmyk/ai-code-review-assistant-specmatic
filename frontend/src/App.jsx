@@ -2,6 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import axios from "axios";
 import { useDropzone } from "react-dropzone";
+import HistoryPage from "./pages/HistoryPage";
 
 import ScoreCard from "./components/ScoreCard";
 import DashboardGrid from "./components/DashboardGrid";
@@ -10,6 +11,8 @@ import RepositoryInput from "./components/RepositoryInput";
 import UploadSection from "./components/UploadSection";
 import DownloadReport from "./components/DownloadReport";
 import IssuePieChart from "./components/charts/IssuePieChart";
+
+
 
 function App() {
 
@@ -374,6 +377,10 @@ function App() {
         </>
 
       )}
+
+           <hr />
+
+      <HistoryPage />
 
     </div>
 

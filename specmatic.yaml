@@ -1,0 +1,10 @@
+sources:
+  - provider: git
+    repository: .
+    provides:
+      - specs/codelensai.yaml
+
+
+
+
+ 
