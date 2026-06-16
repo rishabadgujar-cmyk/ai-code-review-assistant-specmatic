@@ -1,10 +1,26 @@
-sources:
-  - provider: git
-    repository: .
-    provides:
-      - specs/codelensai.yaml
+version: 3
 
+systemUnderTest:
+  service:
+    $ref: "#/components/services/codeLensAI"
 
+components:
+  sources:
+    localContracts:
+      filesystem:
+        directory: .
 
+  services:
+    codeLensAI:
+      definitions:
+        - definition:
+            source:
+              $ref: "#/components/sources/localContracts"
+            specs:
+              - specs/codelensai.yaml
 
- 
+  runOptions:
+    codeLensAITest:
+      openapi:
+        type: test
+        baseUrl: http://backend:8000

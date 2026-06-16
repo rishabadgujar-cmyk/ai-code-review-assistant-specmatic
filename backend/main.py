@@ -75,9 +75,12 @@ app.add_middleware(
 # Groq Client
 # -----------------------------------
 
-client = Groq(
-    api_key=GROQ_API_KEY
-)
+client = None
+
+if GROQ_API_KEY:
+    client = Groq(
+        api_key=GROQ_API_KEY
+    )
 
 
 # -----------------------------------
